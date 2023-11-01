@@ -4,7 +4,7 @@ import { logger } from '@/configs/logger'
 import loaders from '@/loaders'
 
 const bootstrap = async () => {
-  await loaders()
+  await loaders(app)
 
   const server = app.listen(appConfig.PORT, () => {
     logger.info(`Server listening on port ${appConfig.PORT}`)
