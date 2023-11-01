@@ -1,4 +1,4 @@
-import { asFunction, AwilixContainer, Lifetime } from 'awilix'
+import { asClass, AwilixContainer, Lifetime } from 'awilix'
 import path from 'path'
 
 type ModelLoaderParams = {
@@ -9,9 +9,9 @@ export default async ({ container }: ModelLoaderParams) => {
   container.loadModules(
     [
       [
-        path.join(__dirname, '..', 'models/**/*.ts'),
+        path.join(__dirname, '..', 'services/**/*.ts'),
         {
-          register: asFunction,
+          register: asClass,
           lifetime: Lifetime.SINGLETON
         }
       ]
@@ -20,7 +20,7 @@ export default async ({ container }: ModelLoaderParams) => {
       formatName: 'camelCase',
       resolverOptions: {
         lifetime: Lifetime.SINGLETON,
-        register: asFunction
+        register: asClass
       }
     }
   )
