@@ -13,11 +13,12 @@ const shopSchema = new Schema(
     email: {
       type: Schema.Types.String,
       unique: true,
-      trim: true
+      trim: true,
+      required: true
     },
     password: {
       type: Schema.Types.String,
-      require: true
+      required: true
     },
     status: {
       type: Schema.Types.String,
@@ -39,5 +40,4 @@ const shopSchema = new Schema(
   }
 )
 
-//Export the model
 export default model(DOCUMENT_NAME, shopSchema)
