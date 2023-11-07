@@ -3,9 +3,10 @@
 ### signup
 POST {{url_dev}}/signup
 Content-Type: application/json
+x-api-key: 6dba311c5543dd4e87a98bcbc80eeffad99c4a9d0cafe30a5f01bdbf552a013720750ae2d2add3a831a9a3e77a8f296ab9e3632d4b09c1188588bf69519c00eb
 
 {
   "name": "Hoang Nguyen",
-  "email": "hoangncd8@gmail.com",
+  "email": "hoangncd13@gmail.com",
   "password": "1234567@"
 }
